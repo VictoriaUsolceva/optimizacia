@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио работ</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #ffffff;
+        color: #000000;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding: 50px 20px 200px 20px;
+        position: relative;
+      }
+
+      .bottom-bg {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 45vh;
+        background-image: url("me.jpg");
+        background-size: cover;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* filter: grayscale(100%); */
+        opacity: 0.85;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      .bottom-bg::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+
+      .container {
+        width: 100%;
+        max-width: 720px;
+        text-align: center;
+        z-index: 1;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 35px 0 15px 0;
+      }
+
+      .work-list {
+        list-style: none;
+        width: 100%;
+      }
+
+      .work-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid #000000;
+        padding: 15px 20px;
+        margin-bottom: 12px;
+        transition: all 0.2s ease;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .work-item:hover {
+        background-color: #ffffff;
+      }
+
+      .work-title {
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .btn-link {
+        background-color: #ffffff;
+        color: #000000;
+        border: 1px solid #000000;
+        padding: 8px 18px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+        display: inline-block;
+      }
+
+      .btn-link:hover {
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      @media (max-width: 500px) {
+        .work-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .btn-link {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Учебные работы</h1>
+
+      <h2>Учебная практика</h2>
+      <ul class="work-list">
+        <li class="work-item">
+          <span class="work-title">Тема 1 Аудит доступности сайта</span>
+          <a href="pr1-dostupnost.pdf" target="_blank" class="btn-link"
+            >Открыть PDF</a
+          >
+        </li>
+
+        <li class="work-item">
+          <span class="work-title">Тема 2 Стратегия контекстной рекламы</span>
+          <a
+            href="pr2-kontekstnaya-reklama.pdf"
+            target="_blank"
+            class="btn-link"
+            >Открыть PDF</a
+          >
+        </li>
+      </ul>
+
+      <h2>Практические работы</h2>
+      <ul class="work-list">
+        <li class="work-item">
+          <span class="work-title"
+            >Практическая работа №3. Оптимизация изображений</span
+          >
+          <a href="pr3.pdf" target="_blank" class="btn-link">Открыть PDF</a>
+        </li>
+
+        <!-- <li class="work-item">
+          <span class="work-title">Практическая работа №2. Базы данных</span>
+          <a href="prac2.pdf" target="_blank" class="btn-link">Открыть PDF</a>
+        </li> -->
+      </ul>
+
+      <h2>Лабораторные работы</h2>
+      <ul class="work-list">
+        <li class="work-item">
+          <span class="work-title"
+            >Лабораторная работа №1. Проведение общего аудита сайта: SEO,
+            юзабилити, тексты</span
+          >
+          <a href="lab1.pdf" target="_blank" class="btn-link">Открыть PDF</a>
+        </li>
+
+        <li class="work-item">
+          <span class="work-title"
+            >Лабораторная работа №2. Техническая оптимизация, дополнительные
+            настройки
+          </span>
+          <a href="lab2.pdf" target="_blank" class="btn-link">Открыть PDF</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Нижний фоновый блок -->
+    <div class="bottom-bg"></div>
+  </body>
+</html>
